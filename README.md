@@ -1,21 +1,21 @@
 # Product Dashboard System 🚀
 
-Ky është një sistem i plotë për menaxhimin e produkteve dhe përdoruesve, i zhvilluar me PHP dhe MySQL. Projekti ofron një ndërfaqe interaktive për administrimin e të dhënave në mënyrë efikase.
+This is a comprehensive management system for products and users, developed using PHP and MySQL. The project features an interactive interface designed for efficient data administration and a seamless user experience.
 
-## ✨ Veçoritë (Features)
-* **Sistemi i Identifikimit:** Login dhe Register me procesim të sigurt.
-* **Dashboard Interaktiv:** Menaxhimi i produkteve (Shtim, Lexim, Përditësim, Fshirje - CRUD).
-* **Menaxhimi i Përdoruesve:** Mundësia për të përditësuar dhe fshirë përdoruesit direkt nga tabela.
-* **Dizajn Modern:** I realizuar me CSS të personalizuar (dashboard.css, style.css).
-* **JavaScript Dinamik:** Përdorim i skripteve për ndërveprime pa rifreskuar faqen tërësisht.
+## ✨ Features
+* **Authentication System:** Secure Login and Registration functionality.
+* **Interactive Dashboard:** Full product management (Create, Read, Update, Delete - CRUD).
+* **User Management:** Ability to update and delete user accounts directly from the administrative table.
+* **Modern Design:** Built with custom, responsive CSS (`dashboard.css`, `style.css`).
+* **Dynamic Interactions:** Leverages JavaScript for real-time interactions without full page refreshes.
 
-## 🛠 Teknologjitë e Përdorura
+## 🛠 Tech Stack
 * **Backend:** PHP
 * **Frontend:** HTML5, CSS3, JavaScript
 * **Database:** MySQL
-* **Server Lokal:** XAMPP
+* **Local Server:** XAMPP
 
-## 🚀 Si ta instaloni
-1. Shkarkoni (Clone) projektin në folderin tuaj `htdocs`:
+## 🚀 Installation & Setup
+1. **Clone the project** into your `htdocs` directory:
    ```bash
    git clone [https://github.com/andmurturi0/Product-Dashboard-System-.git](https://github.com/andmurturi0/Product-Dashboard-System-.git)
