@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden; /* Ndalon scrolling nëse videoja është më e madhe */
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* E vendos videon pas çdo gjëje */
+    object-fit: cover; /* Siguron që videoja mbulon ekranin pa u deformuar */
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1); /* Transparenca */
+    backdrop-filter: blur(15px); /* Efekti i xhamit (blur) */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Tehu i hollë i bardhë */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #ffffff; /* Teksti i bardhë për xhamin */
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff; /* Labelat e bardhë */
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1); /* Inputet gjithashtu me efekt xhami */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.password-requirements {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff; /* Butoni i bardhë që të bie në sy */
+    color: #1e3c72;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: #e1e1e1;
+    transform: scale(1.02);
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-text a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.footer-text a:hover {
+    border-bottom: 1px solid #ffffff;
+}

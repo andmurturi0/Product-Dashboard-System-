@@ -1,0 +1,8 @@
+# Ignorimi i skedarëve të ndjeshëm dhe sistemit
+.env
+connection.php
+*.log
+node_modules/
+vendor/
+.DS_Store
+Thumbs.db

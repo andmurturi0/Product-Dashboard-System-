@@ -1,0 +1,231 @@
+/* Glassmorphism Design for Dashboard */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #0f172a; /* Dark Blue */
+    background-attachment: fixed;
+    color: #fff;
+}
+
+/* --- ANA E MAJTË (SIDEBAR) --- */
+.sidebar {
+    width: 250px;
+    background: rgba(44, 62, 80, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 22px;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.user-info strong { display: block; font-size: 16px; color: #ffffff; }
+.user-info small { display: block; font-size: 12px; color: #3498db; margin-top: 5px; word-break: break-all; }
+
+.menu-list { list-style: none; flex-grow: 1; }
+.menu-list li { margin-bottom: 10px; }
+.menu-list a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.05);
+}
+.menu-list a:hover, .menu-list a.active {
+    background: rgba(52, 152, 219, 0.4);
+    color: #fff;
+    transform: translateX(5px);
+    border-left: 4px solid #fff;
+}
+
+.logout-btn {
+    background: rgba(231, 76, 60, 0.6);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: auto;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.logout-btn:hover { background: rgba(231, 76, 60, 0.8); transform: scale(1.02); }
+
+/* --- ANA E DJATHTË (CONTENT) --- */
+.main-content {
+    margin-left: 250px;
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.header { margin-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; }
+.header h1 { color: #fff; font-size: 32px; }
+
+.content-body {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* --- DATA GRID DHE KARTAT --- */
+.section-container { margin-bottom: 40px; }
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    min-height: 280px;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.product-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+.product-card-header h3 { font-size: 18px; color: #fff; margin: 0; }
+
+.category-badge {
+    background: rgba(52, 152, 219, 0.2);
+    color: #3498db;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.price-display { font-size: 30px; font-weight: 700; color: #2ecc71; margin: 10px 0; }
+.price-display span { font-size: 14px; color: rgba(255, 255, 255, 0.5); }
+
+.product-features-preview {
+    font-size: 14px; color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;
+    line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden; flex-grow: 1;
+}
+
+.product-meta {
+    margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px; display: flex; justify-content: space-between; align-items: flex-end;
+}
+
+.meta-info { font-size: 11px; color: rgba(255, 255, 255, 0.4); }
+.card-actions { display: flex; gap: 8px; }
+
+.action-btn {
+    padding: 8px 14px; border-radius: 8px; color: white; font-size: 12px; cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s; text-decoration: none;
+    margin-right: 5px;
+}
+.edit-btn { background-color: rgba(40, 167, 69, 0.6); }
+.save-btn { background-color: rgba(0, 123, 255, 0.6); display: none; }
+.cancel-btn { background-color: rgba(108, 117, 125, 0.6); display: none; }
+.delete-btn { background-color: rgba(220, 53, 69, 0.6); }
+
+.action-btn:hover { transform: scale(1.05); }
+
+/* --- SEARCH --- */
+.search-container { margin-bottom: 30px; position: relative; max-width: 500px; }
+.search-container input {
+    width: 100%; padding: 12px 20px 12px 45px; background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: #fff; outline: none;
+}
+.search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); opacity: 0.5; }
+
+/* --- FORMS --- */
+.product-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group label { color: rgba(255, 255, 255, 0.8); font-size: 14px; }
+.form-group input, .form-group select, .form-group textarea, .inline-edit-input {
+    padding: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px; color: #fff; outline: none; transition: all 0.3s;
+}
+.inline-edit-input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(52, 152, 219, 0.4) !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    width: 100% !important;
+}
+.inline-edit-input:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #3498db !important;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+.checkbox-group { 
+    display: flex !important; 
+    flex-direction: row !important; 
+    align-items: center !important; 
+    gap: 10px !important; 
+    grid-column: span 2;
+}
+.checkbox-group input { width: auto !important; margin: 0 !important; }
+.checkbox-group label { margin: 0 !important; }
+
+.submit-btn {
+    grid-column: span 2; padding: 15px; background: rgba(52, 152, 219, 0.6); color: #fff;
+    border: none; border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.submit-btn:hover { background: rgba(52, 152, 219, 0.8); }
+
+/* --- TABELA --- */
+.product-table {
+    width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 20px;
+    background: rgba(255, 255, 255, 0.05); border-radius: 15px; overflow: hidden;
+}
+.product-table th, .product-table td { padding: 15px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.product-table th { background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 12px; text-transform: uppercase; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar { width: 100%; position: relative; height: auto; }
+    .main-content { margin-left: 0; padding: 20px; }
+    .product-form { grid-template-columns: 1fr; }
+    .form-group.full-width, .submit-btn { grid-column: span 1; }
+}
